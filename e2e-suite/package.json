@@ -1,0 +1,19 @@
+{
+  "name": "japanfood-e2e-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone requirement-driven opaque-box E2E test suite for JapanFood POS, KDS & SQL Server operations (Tiers 1-4)",
+  "scripts": {
+    "list": "node ./run-all.mjs --list",
+    "dry-run": "node ./run-all.mjs --dry-run",
+    "test": "node ./run-all.mjs",
+    "test:tier1": "node ./run-all.mjs --tier=1",
+    "test:tier2": "node ./run-all.mjs --tier=2",
+    "test:tier3": "node ./run-all.mjs --tier=3",
+    "test:tier4": "node ./run-all.mjs --tier=4"
+  },
+  "dependencies": {
+    "playwright-core": "^1.65.1"
+  }
+}
