@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="#8B1E1E" />
+  <circle cx="50" cy="50" r="32" fill="#121214" />
+  <circle cx="50" cy="50" r="18" fill="#D4A359" />
+  <text x="50" y="58" font-size="22" font-family="'Noto Serif JP', serif" font-weight="bold" fill="#FAF7F2" text-anchor="middle">桜</text>
+</svg>
