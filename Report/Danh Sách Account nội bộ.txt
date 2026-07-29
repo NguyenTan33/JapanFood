@@ -1,0 +1,95 @@
+====================================================================================================
+                        HỆ THỐNG QUẢN LÝ NHÀ HÀNG NHẬT BẢN (JAPAN FOOD F&B)
+                           DANH SÁCH TÀI KHOẢN MẪU & MẶC ĐỊNH HỆ THỐNG
+====================================================================================================
+Ngày xuất dữ liệu: 2026-11-22
+Nguồn cấp dữ liệu: Infrastructure/Seeders/IdentityDbSeeder.cs
+Thuật toán mã hóa mật khẩu: BCrypt (Work Factor: 11)
+Trạng thái xác thực: EmailConfirmed = true, PhoneNumberConfirmed = true, IsActive = true, Status = Active
+
+----------------------------------------------------------------------------------------------------
+1. TÀI KHOẢN QUẢN TRỊ VIÊN HỆ THỐNG (ADMIN)
+----------------------------------------------------------------------------------------------------
+- Vai trò (Role)         : ADMIN
+- Họ và tên (Full Name)  : Nguyễn Quản Trị (Admin)
+- Tên đăng nhập / Email  : admin@japanfood.vn
+- Số điện thoại          : +84999999999
+- Mật khẩu mặc định      : Admin@123456
+- Biến môi trường đè pass: SEED_ADMIN_PASSWORD
+- Hạng thành viên        : PLATINUM
+- Điểm tích lũy          : 9,999 điểm
+- Quyền hạn chính        : Toàn quyền quản trị hệ thống, cấu hình tham số, phân quyền nhân sự,
+                           quản lý danh mục thực đơn, xem báo cáo doanh thu tài chính cấp cao.
+
+----------------------------------------------------------------------------------------------------
+2. TÀI KHOẢN QUẢN LÝ NHÀ HÀNG (MANAGER)
+----------------------------------------------------------------------------------------------------
+- Vai trò (Role)         : MANAGER
+- Họ và tên (Full Name)  : Trần Quản Lý (Manager)
+- Tên đăng nhập / Email  : manager@japanfood.vn
+- Số điện thoại          : +84988888888
+- Mật khẩu mặc định      : Manager@123456
+- Biến môi trường đè pass: SEED_MANAGER_PASSWORD
+- Hạng thành viên        : GOLD
+- Điểm tích lũy          : 5,000 điểm
+- Quyền hạn chính        : Quản lý ca làm việc, duyệt phiếu hủy món / giảm giá / voucher,
+                           quản lý kho nguyên vật liệu, điều phối bàn ăn, kiểm soát doanh thu ca.
+
+----------------------------------------------------------------------------------------------------
+3. TÀI KHOẢN NHÂN VIÊN THU NGÂN / PHỤC VỤ (STAFF - CASHIER)
+----------------------------------------------------------------------------------------------------
+- Vai trò (Role)         : STAFF
+- Họ và tên (Full Name)  : Lê Thu Ngân (Thu Ngân)
+- Tên đăng nhập / Email  : thungan@japanfood.vn
+- Số điện thoại          : +84977777777
+- Mật khẩu mặc định      : Staff@123456
+- Biến môi trường đè pass: SEED_STAFF_PASSWORD
+- Hạng thành viên        : SILVER
+- Điểm tích lũy          : 1,000 điểm
+- Quyền hạn chính        : Mở bàn, ghi order (POS), chuyển bàn / gộp bàn / tách bàn,
+                           tính tiền, áp dụng voucher khách hàng, in hóa đơn thanh toán.
+
+----------------------------------------------------------------------------------------------------
+4. TÀI KHOẢN NHÂN VIÊN BẾP TRƯỞNG KDS (STAFF - KITCHEN CHEF)
+----------------------------------------------------------------------------------------------------
+- Vai trò (Role)         : STAFF
+- Họ và tên (Full Name)  : Bếp Trưởng KDS (Bếp)
+- Tên đăng nhập / Email  : bep@japanfood.vn
+- Số điện thoại          : +84977888999
+- Mật khẩu mặc định      : Staff@123456
+- Biến môi trường đè pass: SEED_STAFF_PASSWORD
+- Hạng thành viên        : SILVER
+- Điểm tích lũy          : 1,000 điểm
+- Quyền hạn chính        : Nhận order chế biến qua màn hình bếp (Kitchen Display System - KDS),
+                           cập nhật trạng thái chế biến (Cooking -> Cooked -> Served), kiểm soát tồn kho bếp.
+
+----------------------------------------------------------------------------------------------------
+5. TÀI KHOẢN KHÁCH HÀNG THÂN THIẾT (CUSTOMER / USER)
+----------------------------------------------------------------------------------------------------
+- Vai trò (Role)         : CUSTOMER
+- Họ và tên (Full Name)  : Phạm Khách Hàng (Customer)
+- Tên đăng nhập / Email  : customer@japanfood.vn
+- Số điện thoại          : +84966666666
+- Mật khẩu mặc định      : Customer@123456
+- Biến môi trường đè pass: SEED_CUSTOMER_PASSWORD
+- Hạng thành viên        : BRONZE
+- Điểm tích lũy          : 100 điểm
+- Quyền hạn chính        : Đặt bàn online, xem thực đơn và giá món, xem lịch sử ăn uống,
+                           tích lũy điểm loyalty, đổi voucher khuyến mãi, gửi đánh giá (review món ăn).
+
+====================================================================================================
+BẢNG TỔNG HỢP NHANH TÀI KHOẢN & MẬT KHẨU
+====================================================================================================
+STT | VAI TRÒ   | EMAIL                  | SỐ ĐIỆN THOẠI | MẬT KHẨU MẶC ĐỊNH | HỌ VÀ TÊN
+----+-----------+------------------------+---------------+-------------------+--------------------------
+ 1  | ADMIN     | admin@japanfood.vn     | +84999999999  | Admin@123456      | Nguyễn Quản Trị (Admin)
+ 2  | MANAGER   | manager@japanfood.vn   | +84988888888  | Manager@123456    | Trần Quản Lý (Manager)
+ 3  | STAFF     | thungan@japanfood.vn   | +84977777777  | Staff@123456      | Lê Thu Ngân (Thu Ngân)
+ 4  | STAFF     | bep@japanfood.vn       | +84977888999  | Staff@123456      | Bếp Trưởng KDS (Bếp)
+ 5  | CUSTOMER  | customer@japanfood.vn  | +84966666666  | Customer@123456   | Phạm Khách Hàng (Customer)
+====================================================================================================
+LƯU Ý BẢO MẬT KHI DEPLOY PRODUCTION:
+1. Luôn thay đổi mật khẩu mặc định qua các biến môi trường tương ứng trước khi đưa lên Production.
+2. Tất cả mật khẩu lưu trong cơ sở dữ liệu đều được băm bằng chuẩn BCrypt có salt ngẫu nhiên.
+3. Không chia sẻ file chứa mật khẩu gốc qua các kênh chat công cộng hoặc commit file mật khẩu nhạy cảm lên Git.
+====================================================================================================
